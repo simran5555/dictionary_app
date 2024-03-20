@@ -8,10 +8,8 @@ const button = document.querySelector('button')
 
 async function getData() {
     const url = `https://api.dictionaryapi.dev/api/v2/entries/en/${searchWord.value}`
-    console.log(searchWord.value)
     const data = await fetch(url)
     const dataJson = await data.json();
-    console.log(dataJson[0])
 
     pronunciation.style.display = 'block'
 
